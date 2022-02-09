@@ -1,2 +1,38 @@
 [build]
 command = “CI=false npm run build”
+
+
+ { name: "Armadura de Espinhos", type: "Defesa", value: "2700", image: "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2f09a1816d8360d0/60540037ddfe0371b74cfae1/3_24_21_Patch22ItemPreviewArticle_Thornmail.jpg"}
+
+
+ { name: "Capa de Fogo Solar", type: "Defesa", value: "3200", image: "https://static.wikia.nocookie.net/leagueoflegends/images/e/e4/Rabadon%27s_Deathcap_item_HD.png/revision/latest?cb=20201116182950"}
+
+ { name: "Capuz da morte de Rabadon", type: "Arma de dano mágico", value: "3600", image: "https://static.wikia.nocookie.net/leagueoflegends/images/e/e4/Rabadon%27s_Deathcap_item_HD.png/revision/latest?cb=20201116182950"}
+
+{ name: "Cajado do Vazio", type: "Arma de dano mágico", value: "2800", image: "https://static.wikia.nocookie.net/leagueoflegends/images/1/14/Void_Staff_item_HD.png/revision/latest?cb=20210825184303"}
+
+{ name: "Gume do Infinito", type: "Arma de dano físico", value: "3400", image: "https://static.wikia.nocookie.net/leagueoflegends/images/b/bd/Gume_do_Infinito.png/revision/latest?cb=20210329171640&path-prefix=pt-br"}
+
+{ name: "Redenção", type: "Cura", value: "2300", image: "https://static.wikia.nocookie.net/leagueoflegends/images/e/e6/Redemption_item_HD.png/revision/latest?cb=20201111001608"}
+
+{ name: "Arco-Escudo", type: "Arma de dano físico", value: "3400", image: "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blteaebe960fa64ee65/5fa1f0936178a9645452d2dc/6673_Marksman_T4_ImmortalShieldbow.png"}
+
+{ name: "Mata-Kraken", type: "Arma de dano físico", value: "3400", image: "https://static.wikia.nocookie.net/leagueoflegends/images/f/fd/Mata-Cr%C3%A1quens_item.png/revision/latest?cb=20210301010130&path-prefix=pt-br"}
+
+{ name: "Espada do Rei Destruído", type: "Arma de dano físico", value: "3200", image: "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13411a5318c77e70/5fa1eff9f9cf41781dad68e2/3153_Fighter_T3_BladeoftheRuinedKing.png"}
+
+{ name: "Espada Crepuscular de Drakthaar ", type: "Arma de dano físico", value: "3100", image: "https://static.wikia.nocookie.net/leagueoflegends/images/4/44/Duskblade_of_Draktharr_item_HD.png/revision/latest?cb=20201110223004"}
+
+{ name: "Lâmina da Fúria de Guinsoo", type: "Arma de dano físico", value: "2800", image: "https://static.wikia.nocookie.net/leagueoflegends/images/6/64/Guinsoo%27s_Rageblade_item_HD.png/revision/latest?cb=20201110230134"}
+
+{ name: "Furacão de Runaan", type: "Arma de dano físico", value: "2600", image: "https://static.wikia.nocookie.net/leagueoflegends/images/f/ff/Runaan%27s_Hurricane_item_HD.png/revision/latest?cb=20201111001820"}
+
+{ name: "Semblante Espiritual", type: "Defesa", value: "2900", image: "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb2026b7d46b1e118/5fa1efd5545bdb56ce49340f/3065_Tank_T3_SpiritVisage.png"}
+
+{ name: "Armadura de Warmog", type: "Cura", value: "3000", image: "https://static.wikia.nocookie.net/leagueoflegends/images/6/6e/Warmog%27s_Armor_item_HD.png/revision/latest?cb=20201111011819"}
+
+
+{ name: "Regenerador de Pedra da Lua", type: "Cura", value: "2500", image: "https://senpai.gg/blog/wp-content/uploads/2020/11/6617_Enchanter_T4_MoonstoneRenewer.png"}
+
+{ name: "Mandato Imperial", type: "Arma de dano mágico", value: "2500", image: "https://senpai.gg/blog/wp-content/uploads/2020/11/4005_Enchanter_T4_ImperialMandate.png"}
+
