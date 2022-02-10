@@ -15,20 +15,23 @@ export default function BigLogo() {
 }
 
 const Top = styled.div`
-  padding-top: 38px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
 `;
 
 const Logo = styled.div`
-  width: 300px;
-  height: 100px;
-
+  width: 200px;
+  height: 70px;
+  position: sticky;
   background-image: url(${logo});
   background-repeat: no-repeat;
-  background-size: 300px 100px;
+  background-size: 200px 70px;
 `;
 const StyledLink = styled(Link)`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-decoration: none;
+  margin-left: 10%;
 `;
