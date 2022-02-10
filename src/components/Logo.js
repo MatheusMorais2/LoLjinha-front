@@ -7,7 +7,7 @@ export default function BigLogo() {
     <>
       <Top>
         <StyledLink to="/">
-          <Logo />
+          <Logo></Logo>
         </StyledLink>
       </Top>
     </>
@@ -17,6 +17,7 @@ export default function BigLogo() {
 const Top = styled.div`
   padding: 10px;
   width: 100%;
+
   height: 100%;
 `;
 
@@ -29,6 +30,7 @@ const Logo = styled.div`
   background-size: 200px 70px;
 `;
 const StyledLink = styled(Link)`
+  width: 200px;
   display: flex;
   justify-content: start;
   align-items: center;
