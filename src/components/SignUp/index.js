@@ -80,7 +80,7 @@ export default function SignUp() {
           {isLoading ? "" : "Cadastrar"}
         </Button>
       </form>
-      <StyledLink to="/">Já tem uma conta? Faça login!</StyledLink>
+      <StyledLink to="/login">Já tem uma conta? Faça login!</StyledLink>
     </Container>
   );
 }
