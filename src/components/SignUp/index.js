@@ -6,6 +6,7 @@ import { Container, StyledLink } from "./style";
 import Input from "../Input";
 import { Button } from "../Button";
 import { signUp } from "../../services/loljinha";
+import BigLogo from "../Logo";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -39,48 +40,51 @@ export default function SignUp() {
   }
 
   return (
-    <Container>
-      <ToastAnimated />
+    <>
+      <BigLogo />
+      <Container>
+        <ToastAnimated />
 
-      <form className="form" onSubmit={handleSignUp}>
-        <Input
-          disabled={isLoading}
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          name="name"
-          placeholder="Nome"
-        />
-        <Input
-          disabled={isLoading}
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          name="email"
-          placeholder="E-mail"
-        />
-        <Input
-          disabled={isLoading}
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          name="password"
-          placeholder="Senha"
-        />
+        <form className="form" onSubmit={handleSignUp}>
+          <Input
+            disabled={isLoading}
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            name="name"
+            placeholder="Nome"
+          />
+          <Input
+            disabled={isLoading}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            placeholder="E-mail"
+          />
+          <Input
+            disabled={isLoading}
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            placeholder="Senha"
+          />
 
-        <Input
-          disabled={isLoading}
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          name="password"
-          placeholder="Confirme sua senha"
-        />
-        <Button disabled={isLoading} type="submit">
-          {isLoading ? "" : "Cadastrar"}
-        </Button>
-      </form>
-      <StyledLink to="/">Já tem uma conta? Faça login!</StyledLink>
-    </Container>
+          <Input
+            disabled={isLoading}
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            name="password"
+            placeholder="Confirme sua senha"
+          />
+          <Button disabled={isLoading} type="submit">
+            {isLoading ? "" : "Cadastrar"}
+          </Button>
+        </form>
+        <StyledLink to="/login">Já tem uma conta? Faça login!</StyledLink>
+      </Container>
+    </>
   );
 }

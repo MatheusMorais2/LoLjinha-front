@@ -6,6 +6,7 @@ import { login } from "../../services/loljinha";
 import { Button } from "../Button";
 import Loading from "../Loading";
 import Input from "../Input";
+import BigLogo from "../Logo";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -32,6 +33,7 @@ export default function Login() {
 
   return (
     <>
+      <BigLogo />
       <Container>
         <div className="right-side">
           <h1 className="title">

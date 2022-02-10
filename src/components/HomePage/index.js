@@ -1,15 +1,22 @@
 import React from "react";
-import { Container, Form, StyledLink } from "./style";
+import BigLogo from "../Logo";
+
+import Slider from "../Slider";
+import { Container, Content, Header } from "./style";
 
 function HomePage() {
   return (
     <>
-      <h1>LoLjinha</h1>
+      <BigLogo />
+      <Header></Header>
+      <Content>
+        <Slider />
+      </Content>
       <Container>
-        <Form>
+        {/* <Form>
           <button>Aqui</button>
           <StyledLink to="/login">Primeira vez? Cadastre-se!</StyledLink>
-        </Form>
+        </Form> */}
       </Container>
     </>
   );
