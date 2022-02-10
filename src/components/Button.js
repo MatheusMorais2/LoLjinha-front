@@ -58,4 +58,27 @@ const SaveButton = styled.button`
     background-color: #c46fe9;
   }
 `;
-export { Button, CancelButton, SaveButton };
+
+const HomeButton = styled.button`
+  height: 40px;
+  width: 90px;
+  gap: 20px;
+  border: none;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  background: #154473;
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+  &:disabled {
+    display: flex;
+    justify-content: center;
+    background-color: #c46fe9;
+  }
+`;
+export { Button, CancelButton, SaveButton, HomeButton };

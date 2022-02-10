@@ -1,16 +1,35 @@
 import React from "react";
-import { Container, Form, StyledLink } from "./style";
+import BigLogo from "../Logo";
+import { BsCartPlus } from "react-icons/bs";
+import Slider from "../Slider";
+import { Container, Content, Header, NavigateBar, StyledLink } from "./style";
+import { HomeButton } from "../Button";
 
 function HomePage() {
   return (
     <>
-      <h1>LoLjinha</h1>
-      <Container>
-        <Form>
-          <button>Aqui</button>
-          <StyledLink to="/login">Primeira vez? Cadastre-se!</StyledLink>
-        </Form>
-      </Container>
+      <Header>
+        <BigLogo />
+        <StyledLink to="/login">
+          <HomeButton>Login</HomeButton>
+        </StyledLink>
+        <StyledLink to="/sign-up">
+          <HomeButton>SignUp</HomeButton>
+        </StyledLink>
+      </Header>
+      <NavigateBar>
+        <span>Todos os produtos</span>
+        <span>Armaduras</span>
+        <span>Armas</span>
+        <span>Cura</span>
+        <div className="icon">
+          <BsCartPlus />
+        </div>
+      </NavigateBar>
+      <Content>
+        <Slider />
+      </Content>
+      <Container>itens</Container>
     </>
   );
 }

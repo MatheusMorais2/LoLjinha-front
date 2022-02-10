@@ -3,7 +3,7 @@ import styled from "styled-components";
 import poro1 from "../../assets/poro1.png";
 
 const Container = styled.div`
-  min-height: 90vh;
+  min-height: 70vh;
 
   margin: 30px;
   display: flex;
@@ -62,4 +62,9 @@ const StyledLink = styled(Link)`
   color: black;
   text-decoration: none;
 `;
-export { Container, StyledLink };
+
+const Top = styled.div`
+  padding-top: 58px;
+`;
+
+export { Container, StyledLink, Top };
