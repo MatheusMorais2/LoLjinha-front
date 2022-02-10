@@ -8,7 +8,8 @@ const Container = styled.div`
 
 const Header = styled.div`
   display: flex;
-
+  margin-left: 30px;
+  margin-right: 30px;
   align-items: center;
 `;
 
@@ -25,7 +26,7 @@ const StyledLink = styled(Link)`
 const Content = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20px;
   width: 100%;
   height: 800px;
   background-color: #e8d8bb;

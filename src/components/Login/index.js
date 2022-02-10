@@ -4,7 +4,7 @@ import UserContext from "../../context/UserContext";
 import { React, useState, useContext } from "react";
 import { login } from "../../services/loljinha";
 import { Button } from "../Button";
-import Loading from "../Loading";
+// import Loading from "../Loading";
 import Input from "../Input";
 import BigLogo from "../Logo";
 
@@ -35,7 +35,7 @@ export default function Login() {
     <>
       <BigLogo />
       <Container>
-        <div className="right-side">
+        <div className="center">
           <h1 className="title">
             Digite seus dados e faça seu login, invocador!
           </h1>
@@ -60,8 +60,7 @@ export default function Login() {
               </Button>
             </div>
           </form>
-        </div>
-        <div className="left-side">
+
           <StyledLink to="/sign-up">Não possui conta? Cadastre-se</StyledLink>
           <div className="icon"></div>
         </div>
