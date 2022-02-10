@@ -44,46 +44,53 @@ export default function SignUp() {
       <BigLogo />
       <Container>
         <ToastAnimated />
+        <div className="center">
+          <h1 className="title">
+            Crie sua conta e realize suas compras, invocador!
+          </h1>
+          <form onSubmit={handleSignUp}>
+            <Input
+              disabled={isLoading}
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              name="name"
+              placeholder="Nome"
+            />
+            <Input
+              disabled={isLoading}
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              placeholder="E-mail"
+            />
+            <Input
+              disabled={isLoading}
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              placeholder="Senha"
+            />
 
-        <form className="form" onSubmit={handleSignUp}>
-          <Input
-            disabled={isLoading}
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            name="name"
-            placeholder="Nome"
-          />
-          <Input
-            disabled={isLoading}
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            placeholder="E-mail"
-          />
-          <Input
-            disabled={isLoading}
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            name="password"
-            placeholder="Senha"
-          />
-
-          <Input
-            disabled={isLoading}
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            name="password"
-            placeholder="Confirme sua senha"
-          />
-          <Button disabled={isLoading} type="submit">
-            {isLoading ? "" : "Cadastrar"}
-          </Button>
-        </form>
-        <StyledLink to="/login">Já tem uma conta? Faça login!</StyledLink>
+            <Input
+              disabled={isLoading}
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              name="password"
+              placeholder="Confirme sua senha"
+            />
+            <div className="button-glow">
+              <Button disabled={isLoading} type="submit">
+                {isLoading ? "" : "Cadastrar"}
+              </Button>{" "}
+            </div>
+          </form>
+          <StyledLink to="/login">Já tem uma conta? Faça login!</StyledLink>
+          <div className="icon"></div>
+        </div>
       </Container>
     </>
   );

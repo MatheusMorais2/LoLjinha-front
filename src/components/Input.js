@@ -2,15 +2,13 @@ import styled from "styled-components";
 
 const Input = styled.input`
   height: 45px;
-  width: 100%;
-
+  width: 500px;
   border: 1px solid #d5d5d5;
   background-color: #ffffff;
   color: #222222;
   font-family: "Lexend Deca", sans-serif;
   font-size: 19.976px;
-
-  padding: 14px;
+  display: flex;
   margin-bottom: 10px;
   border-radius: 5px;
 
