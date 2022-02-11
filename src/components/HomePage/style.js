@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   min-height: 40vh;
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,57 +35,25 @@ const Content = styled.div`
   height: 600px;
   background-color: #e8d8bb;
 `;
-const NavigateBar = styled.div`
-  background-color: #ceba95;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  font-size: 30px;
-  color: #232f54;
-
-  .icon {
-    padding-left: 300px;
-    transition: width 2s, height 2s, transform 1s;
-  }
-  .icon:hover {
-    transform: scale(1.1);
-  }
-  span {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-    color: #232f54;
-
-    margin-left: 200px;
-    margin-right: 50px;
-  }
-  span:hover {
-    color: #189ea7;
-  }
-`;
 
 const ItemBox = styled.div`
   display: flex;
-  width: 100px;
-  height: 120px;
+  width: 140px;
+  height: 180px;
   overflow-wrap: break-word;
   text-align: center;
   flex-direction: column;
-
+  margin: 30px;
   margin-left: 100px;
-  background-color: white;
-  border: solid 5px white;
-  border-radius: 10px;
+  background-color: #efe7da;
+
+  border-radius: 8px;
   justify-content: center;
   align-items: center;
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
   }
   span {
     width: 100px;
@@ -93,9 +61,10 @@ const ItemBox = styled.div`
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 18px;
     color: black;
+    margin: 5px;
   }
 `;
 
@@ -107,12 +76,19 @@ const ItemList = styled.div`
   border-radius: 10px;
 `;
 
-export {
-  Container,
-  Header,
-  StyledLink,
-  Content,
-  NavigateBar,
-  ItemBox,
-  ItemList,
-};
+const Footer = styled.div`
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .poro-gif {
+    width: 50px;
+    height: 50px;
+    background-image: url("http://pa1.narvii.com/6378/a79f542fe99748319baa292def19453ddc0d9f45_00.gif");
+    background-size: 50px 50px;
+  }
+`;
+
+export { Container, Header, StyledLink, Content, ItemBox, ItemList, Footer };

@@ -7,6 +7,7 @@ import { Button } from "../Button";
 import Loading from "../Loading";
 import Input from "../Input";
 import BigLogo from "../Logo";
+import NavigateBar from "../NavigateBar";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -34,6 +35,7 @@ export default function Login() {
   return (
     <>
       <BigLogo />
+      <NavigateBar />
       <Container>
         <div className="center">
           <h1 className="title">
