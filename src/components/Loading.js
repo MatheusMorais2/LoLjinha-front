@@ -8,8 +8,8 @@ const Loading = () => {
         type="Rings"
         color="white"
         arialLabel="loading-indicator"
-        height={45}
-        width={45}
+        height={44}
+        width={44}
       />
     </>
   );
