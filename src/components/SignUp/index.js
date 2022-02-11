@@ -8,6 +8,7 @@ import { Button } from "../Button";
 import { signUp } from "../../services/loljinha";
 import BigLogo from "../Logo";
 import Loading from "../Loading";
+import NavigateBar from "../NavigateBar";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -43,6 +44,7 @@ export default function SignUp() {
   return (
     <>
       <BigLogo />
+      <NavigateBar />
       <Container>
         <ToastAnimated />
         <div className="center">
