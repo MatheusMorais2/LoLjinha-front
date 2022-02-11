@@ -17,4 +17,10 @@ function login(formData) {
   return promise;
 }
 
-export { signUp, login };
+function getItems(body) {
+  const promise = axios.get(`${process.env.REACT_APP_API}/`);
+
+  return promise;
+}
+
+export { signUp, login, getItems };

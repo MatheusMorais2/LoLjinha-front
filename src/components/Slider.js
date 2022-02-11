@@ -19,8 +19,8 @@ const Slider = () => {
   return (
     <div>
       <SimpleImageSlider
-        width={1200}
-        height={644}
+        width={1000}
+        height={500}
         images={images}
         showBullets={true}
         showNavs={true}
