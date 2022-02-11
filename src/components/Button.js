@@ -9,9 +9,12 @@ const Button = styled.button`
   font-family: "Lexend Deca", sans-serif;
   color: rgba(255, 255, 255, 0.8);
   background: #154473;
-  padding: 12px 15px;
+  padding: 12px 12px;
   border-radius: 4px;
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 
