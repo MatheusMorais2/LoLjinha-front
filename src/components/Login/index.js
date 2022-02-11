@@ -4,7 +4,7 @@ import UserContext from "../../context/UserContext";
 import { React, useState, useContext } from "react";
 import { login } from "../../services/loljinha";
 import { Button } from "../Button";
-// import Loading from "../Loading";
+import Loading from "../Loading";
 import Input from "../Input";
 import BigLogo from "../Logo";
 
@@ -22,7 +22,7 @@ export default function Login() {
 
     promise.then((response) => {
       setUser(response.data);
-      navigate("/home");
+      navigate("/");
     });
 
     promise.catch(() => {
@@ -56,7 +56,7 @@ export default function Login() {
             ></Input>
             <div className="button-glow">
               <Button disabled={isLoading} type="submit">
-                {isLoading ? "" : "Entrar"}
+                {isLoading ? <Loading /> : "Entrar"}
               </Button>
             </div>
           </form>

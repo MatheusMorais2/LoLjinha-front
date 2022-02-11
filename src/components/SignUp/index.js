@@ -7,6 +7,7 @@ import Input from "../Input";
 import { Button } from "../Button";
 import { signUp } from "../../services/loljinha";
 import BigLogo from "../Logo";
+import Loading from "../Loading";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -84,8 +85,8 @@ export default function SignUp() {
             />
             <div className="button-glow">
               <Button disabled={isLoading} type="submit">
-                {isLoading ? "" : "Cadastrar"}
-              </Button>{" "}
+                {isLoading ? <Loading /> : "Entrar"}
+              </Button>
             </div>
           </form>
           <StyledLink to="/login">Já tem uma conta? Faça login!</StyledLink>

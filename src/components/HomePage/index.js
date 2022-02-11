@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BigLogo from "../Logo";
 import { BsCartPlus } from "react-icons/bs";
 import Slider from "../Slider";
-import { Container, Content, Header, NavigateBar, StyledLink } from "./style";
+import {
+  Container,
+  Content,
+  Header,
+  ItemBox,
+  NavigateBar,
+  StyledLink,
+  ItemList,
+} from "./style";
 import { HomeButton } from "../Button";
+import { getItems } from "../../services/loljinha";
 
 function HomePage() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    renderHome();
+  }, []);
+
+  function renderHome() {
+    const promise = getItems();
+    promise.then((response) => {
+      setItems(response.data);
+      console.log("oioio");
+    });
+  }
+
   return (
     <>
       <Header>
@@ -29,7 +52,17 @@ function HomePage() {
       <Content>
         <Slider />
       </Content>
-      <Container>itens</Container>
+      <Container>
+        <ItemList>
+          {items.map((item) => (
+            <ItemBox>
+              <span>{item.name} </span>
+              <img src={item.image} alt={item.name}></img>
+              <span>{item.value}</span>
+            </ItemBox>
+          ))}
+        </ItemList>
+      </Container>
     </>
   );
 }
