@@ -1,32 +1,10 @@
 import { Header, Container, Product, Total } from "./style";
+import UserContext from "../../../context/UserContext";
+import { useContext } from "react";
 
 export default function Table() {
-  const productArray = [
-    {
-      name: "Rabaddon",
-      price: "3600",
-      description: "blablalblalba",
-      img: "https://pbs.twimg.com/media/Eg8dQ_HWkAA6ZDB.jpg",
-    },
-    {
-      name: "Rabaddon",
-      price: "3600",
-      description: "blablalblalba",
-      img: "https://pbs.twimg.com/media/Eg8dQ_HWkAA6ZDB.jpg",
-    },
-    {
-      name: "Rabaddon",
-      price: "3600",
-      description: "blablalblalba",
-      img: "https://pbs.twimg.com/media/Eg8dQ_HWkAA6ZDB.jpg",
-    },
-    {
-      name: "Rabaddon",
-      price: "3600",
-      description: "blablalblalba",
-      img: "https://pbs.twimg.com/media/Eg8dQ_HWkAA6ZDB.jpg",
-    },
-  ];
+  const { user } = useContext(UserContext);
+  const productArray = user.cart;
 
   let total = 0;
 
