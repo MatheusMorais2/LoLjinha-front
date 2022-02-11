@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import Cart from "./components/Cart";
 
 export default function App() {
   const [user, setUser] = useState("");
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
