@@ -24,6 +24,7 @@ const Slider = () => {
         images={images}
         showBullets={true}
         showNavs={true}
+        autoPlay={true}
       />
     </div>
   );

@@ -13,11 +13,11 @@ export default function NavigateBar() {
         <span>Armaduras</span>
         <span>Armas</span>
         <span>Cura</span>
-        <StyledLink to="/cart">
-          <div className="icon">
+        <div className="icon">
+          <StyledLink to="/cart">
             <BsCartPlus />
-          </div>
-        </StyledLink>
+          </StyledLink>
+        </div>
       </Navigate>
     </>
   );
@@ -55,7 +55,7 @@ const Navigate = styled.div`
     color: #189ea7;
   }
 `;
-
 const StyledLink = styled(Link)`
+  text-decoration: none;
   color: #232f54;
 `;

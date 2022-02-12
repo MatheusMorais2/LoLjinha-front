@@ -1,6 +1,6 @@
 import axios from "axios";
-import UserContext from "../context/UserContext";
-import { useContext } from "react";
+// import UserContext from "../context/UserContext";
+// import { useContext } from "react";
 
 function signUp(formData) {
   const promise = axios.post(
@@ -17,10 +17,15 @@ function login(formData) {
   return promise;
 }
 
-function getItems(body) {
+function getItems() {
   const promise = axios.get(`${process.env.REACT_APP_API}/`);
 
   return promise;
 }
 
-export { signUp, login, getItems };
+function getProduct({ id }) {
+  const promise = axios.get(`${process.env.REACT_APP_API}/product/${id}`);
+  return promise;
+}
+
+export { signUp, login, getItems, getProduct };

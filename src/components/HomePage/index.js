@@ -5,9 +5,10 @@ import {
   Container,
   Content,
   Header,
-  ItemBox,
   StyledLink,
   ItemList,
+  ItemBox,
+  Item,
   Footer,
 } from "./style";
 import { HomeButton } from "../Button";
@@ -27,6 +28,7 @@ function HomePage() {
       setItems(response.data);
     });
   }
+  console.log(items);
 
   return (
     <>
@@ -49,9 +51,13 @@ function HomePage() {
           <ItemList>
             {items.map((item) => (
               <ItemBox>
-                <span>{item.name} </span>
-                <img src={item.image} alt={item.name}></img>
-                <span>{item.value}</span>
+                <StyledLink to={`/product/${item._id}`}>
+                  <Item>
+                    <span className="title">{item.name} </span>
+                    <img src={item.image} alt={item.name}></img>
+                    <span className="price">{item.value}</span>
+                  </Item>
+                </StyledLink>
               </ItemBox>
             ))}
           </ItemList>

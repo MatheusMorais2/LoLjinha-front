@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import Cart from "./components/Cart";
 import ConfirmPurchase from "./components/ConfirmPurchase";
+import Product from "./components/Product";
 
 export default function App() {
   const [user, setUser] = useState("");
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/confirm-purchase" element={<ConfirmPurchase />} />
         </Routes>

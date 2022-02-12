@@ -47,4 +47,24 @@ const HomeButton = styled.button`
     background-color: #189ea7;
   }
 `;
-export { Button, HomeButton };
+const AddCartButton = styled.button`
+  height: 50px;
+  width: 160px;
+  border: none;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  background: #154473;
+  border-radius: 4px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+  &:disabled {
+    display: flex;
+    justify-content: center;
+    background-color: #189ea7;
+  }
+`;
+export { Button, HomeButton, AddCartButton };
