@@ -18,7 +18,7 @@ export default function Table() {
       {productArray.map((elem) => {
         total += parseInt(elem.price);
         return (
-          <Product>
+          <Product key={elem.name}>
             <div className="right-side">
               <img className="product-img" src={elem.img} alt={elem.name} />
               <span className="name">{elem.name}</span>

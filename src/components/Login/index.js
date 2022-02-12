@@ -23,6 +23,7 @@ export default function Login() {
 
     promise.then((response) => {
       setUser(response.data);
+      console.log("response.data: ", response.data);
       navigate("/");
     });
 

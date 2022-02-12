@@ -2,12 +2,17 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 80%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   font-family: Raleway;
   font-size: 18px;
   line-height: 18px;
   color: #232f54;
+  background-color: #ceba95;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 `;
 
 const Header = styled.div`
