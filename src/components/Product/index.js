@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getProduct } from "../../services/loljinha";
+import React, { useEffect, useState, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getProduct, putCart } from "../../services/loljinha";
 import { AddCartButton } from "../Button";
 import { BsCartPlus } from "react-icons/bs";
 import BigLogo from "../Logo";
 import NavigateBar from "../NavigateBar";
-import { Container, StyledLink, ProductInfo, ProductImg } from "./style";
+import { Container, ProductInfo, ProductImg } from "./style";
+import UserContext from "../../context/UserContext";
 
 export default function Product() {
   const { id } = useParams();
   const [item, setItem] = useState({});
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
+
   useEffect(() => {
     renderProduct();
   }, []);
@@ -22,6 +26,16 @@ export default function Product() {
     promise.catch((error) => {
       console.log(error);
     });
+  }
+
+  function putIntoCart() {
+    const promise = putCart(id, user.token);
+    promise.then(() => navigate("/cart", { replace: true }));
+    promise.catch((error) => console.log(error));
+  }
+
+  function loginAlert() {
+    alert("Por favor, faça login para continuar para o carrinho");
   }
 
   return (
@@ -37,13 +51,12 @@ export default function Product() {
             <span>{item.name}</span>
             <span className="price">{item.value}</span>
             <div className="img"></div>
-            <StyledLink to="/cart">
-              <AddCartButton>
-                {" "}
-                <BsCartPlus className="icon" />
-                Comprar
-              </AddCartButton>
-            </StyledLink>
+
+            <AddCartButton onClick={user ? putIntoCart : loginAlert}>
+              {" "}
+              <BsCartPlus className="icon" />
+              Comprar
+            </AddCartButton>
           </ProductInfo>
         </div>
       </Container>
