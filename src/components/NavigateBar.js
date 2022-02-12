@@ -1,5 +1,6 @@
 import { BsCartPlus } from "react-icons/bs";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function NavigateBar() {
   return (
@@ -10,7 +11,9 @@ export default function NavigateBar() {
         <span>Armas</span>
         <span>Cura</span>
         <div className="icon">
-          <BsCartPlus />
+          <StyledLink to="/cart">
+            <BsCartPlus />
+          </StyledLink>
         </div>
       </Navigate>
     </>
@@ -48,4 +51,8 @@ const Navigate = styled.div`
   span:hover {
     color: #189ea7;
   }
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #232f54;
 `;
