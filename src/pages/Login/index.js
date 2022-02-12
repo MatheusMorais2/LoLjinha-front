@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import { React, useState, useContext } from "react";
 import { login } from "../../services/loljinha";
-import { Button } from "../Button";
-import Loading from "../Loading";
-import Input from "../Input";
-import BigLogo from "../Logo";
-import NavigateBar from "../NavigateBar";
+import { Button } from "../../components/Button";
+import Loading from "../../components/Loading";
+import Input from "../../components/Input";
+import BigLogo from "../../components/Logo";
+import NavigateBar from "../../components/NavigateBar";
 
 export default function Login() {
   const [email, setEmail] = useState("");
