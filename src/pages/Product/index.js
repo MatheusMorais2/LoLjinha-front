@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/components/Product/index.js
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getProduct, putCart } from "../../services/loljinha";
@@ -8,16 +7,6 @@ import BigLogo from "../Logo";
 import NavigateBar from "../NavigateBar";
 import { Container, ProductInfo, ProductImg } from "./style";
 import UserContext from "../../context/UserContext";
-=======
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getProduct } from "../../services/loljinha";
-import { AddCartButton } from "../../components/Button";
-import { BsCartPlus } from "react-icons/bs";
-import BigLogo from "../../components/Logo";
-import NavigateBar from "../../components/NavigateBar";
-import { Container, StyledLink, ProductInfo, ProductImg } from "./style";
->>>>>>> main:src/pages/Product/index.js
 
 export default function Product() {
   const { id } = useParams();
