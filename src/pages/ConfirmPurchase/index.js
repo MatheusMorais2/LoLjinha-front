@@ -1,4 +1,4 @@
-import NavigateBar from "../NavigateBar";
+import NavigateBar from "../../components/NavigateBar";
 import {
   Container,
   Overview,

@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getProduct, putCart } from "../../services/loljinha";
-import { AddCartButton } from "../Button";
+import { AddCartButton } from "../../components/Button";
 import { BsCartPlus } from "react-icons/bs";
-import BigLogo from "../Logo";
-import NavigateBar from "../NavigateBar";
+import BigLogo from "../../components/Logo";
+import NavigateBar from "../../components/NavigateBar";
 import { Container, ProductInfo, ProductImg } from "./style";
 import UserContext from "../../context/UserContext";
 

@@ -1,4 +1,4 @@
-import { StyledLink } from "./HomePage/style";
+import { StyledLink } from "../pages/HomePage/style";
 import styled from "styled-components";
 
 export default function ToLogin() {

@@ -4,7 +4,7 @@ import NavigateBar from "../../components/NavigateBar";
 import { StyledLink } from "../HomePage/style";
 import UserContext from "../../context/UserContext";
 import { useContext } from "react";
-import ToLogin from "../ToLogin";
+import ToLogin from "../../components/ToLogin";
 
 export default function Cart() {
   const { user } = useContext(UserContext);
