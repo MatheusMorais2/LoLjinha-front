@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import ToastAnimated, { showToast } from "../../ui-lib";
 
 import { Container, StyledLink } from "./style";
-import Input from "../Input";
-import { Button } from "../Button";
+import Input from "../../components/Input";
+import { Button } from "../../components/Button";
 import { signUp } from "../../services/loljinha";
-import BigLogo from "../Logo";
-import Loading from "../Loading";
-import NavigateBar from "../NavigateBar";
+import BigLogo from "../../components/Logo";
+import Loading from "../../components/Loading";
+import NavigateBar from "../../components/NavigateBar";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");

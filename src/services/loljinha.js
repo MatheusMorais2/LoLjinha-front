@@ -1,6 +1,4 @@
 import axios from "axios";
-// import UserContext from "../context/UserContext";
-// import { useContext } from "react";
 
 function signUp(formData) {
   const promise = axios.post(

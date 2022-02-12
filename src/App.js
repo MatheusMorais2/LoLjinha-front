@@ -1,12 +1,20 @@
 import { useState } from "react";
 import UserContext from "./context/UserContext";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+<<<<<<< HEAD
 import HomePage from "./components/HomePage";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import Cart from "./components/Cart";
 import ConfirmPurchase from "./components/ConfirmPurchase";
 import Product from "./components/Product";
+=======
+import HomePage from "./pages/HomePage";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import Cart from "./pages/Cart";
+import Product from "./pages/Product";
+>>>>>>> main
 
 export default function App() {
   const [user, setUser] = useState("");
