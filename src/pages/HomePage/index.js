@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import BigLogo from "../Logo";
-import Slider from "../Slider";
+import BigLogo from "../../components/Logo";
+import Slider from "../../components/Slider";
 import {
   Container,
   Content,
@@ -11,9 +11,9 @@ import {
   Item,
   Footer,
 } from "./style";
-import { HomeButton } from "../Button";
+import { HomeButton } from "../../components/Button";
 import { getItems } from "../../services/loljinha";
-import NavigateBar from "../NavigateBar";
+import NavigateBar from "../../components/NavigateBar";
 
 function HomePage() {
   const [items, setItems] = useState([]);
@@ -28,7 +28,6 @@ function HomePage() {
       setItems(response.data);
     });
   }
-  console.log(items);
 
   return (
     <>
