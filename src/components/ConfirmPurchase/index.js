@@ -13,6 +13,11 @@ import { useContext } from "react";
 export default function ConfirmPurchase() {
   const { user } = useContext(UserContext);
   let total = 0;
+
+  /*   function handleConfirm() {
+
+  }; */
+
   return (
     <Container>
       <NavigateBar />
