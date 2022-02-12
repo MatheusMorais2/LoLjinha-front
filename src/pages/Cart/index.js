@@ -1,6 +1,6 @@
 import { Container, Banner, CartText, Image, CartButton } from "./style";
 import Table from "./Table";
-import NavigateBar from "../NavigateBar";
+import NavigateBar from "../../components/NavigateBar";
 import { StyledLink } from "../HomePage/style";
 import UserContext from "../../context/UserContext";
 import { useContext } from "react";
