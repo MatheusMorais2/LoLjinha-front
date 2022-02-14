@@ -10,6 +10,7 @@ import {
   Footer,
 } from "./style";
 import { getItems } from "../../services/loljinha";
+import Header from "../../components/Header";
 import NavigateBar from "../../components/NavigateBar";
 import Header from "../../components/Header";
 

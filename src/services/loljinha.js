@@ -26,6 +26,26 @@ function getProduct({ id }) {
   return promise;
 }
 
+function getAllProduct() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/all`);
+  return promise;
+}
+
+function getArmor() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/armor`);
+  return promise;
+}
+
+function getWeapon() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/weapon`);
+  return promise;
+}
+
+function getHeal() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/heal`);
+  return promise;
+}
+
 function putCart(id, token) {
   const config = { Authorization: `Bearer ${token}` };
   const promise = axios.put(
@@ -64,12 +84,6 @@ function confirmPurchase(token, productArray, setConfirmCode, setUser) {
 
 function clearCart(token, setUser) {
   const config = { authorization: `Bearer ${token}` };
-
-  /* const promise = axios({
-    method: "put",
-    url: `${process.env.REACT_APP_API}/cart/clear`,
-    headers: config,
-  }); */
 
   const promise = axios.delete(
     `${process.env.REACT_APP_API}/cart/clear`,
@@ -113,6 +127,10 @@ export {
   login,
   getItems,
   getProduct,
+  getAllProduct,
+  getArmor,
+  getWeapon,
+  getHeal,
   putCart,
   getCart,
   confirmPurchase,

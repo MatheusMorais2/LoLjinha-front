@@ -6,13 +6,18 @@ export default function NavigateBar() {
   return (
     <>
       <Navigate>
-        <span>
-          Todos os
-          <br /> produtos
-        </span>
-        <span>Armaduras</span>
-        <span>Armas</span>
-        <span>Cura</span>
+        <StyledLink to={"/all"}>
+          <span>Todos os produtos</span>
+        </StyledLink>
+        <StyledLink to={"/armor"}>
+          <span>Armaduras</span>
+        </StyledLink>
+        <StyledLink to={"/weapon"}>
+          <span>Armas</span>
+        </StyledLink>
+        <StyledLink to={"/heal"}>
+          <span>Cura</span>
+        </StyledLink>
         <div className="icon">
           <StyledLink to="/cart">
             <BsCartPlus />
@@ -27,14 +32,18 @@ const Navigate = styled.div`
   padding: 0 5vw;
   background-color: #ceba95;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  padding-left: 300px;
+  width: 100%;
   height: 40px;
   color: #232f54;
   .icon {
     transition: width 2s, height 2s, transform 1s;
     font-size: 30px;
+  }
+  .icon:hover {
+    transform: scale(1.2);
   }
   span {
     font-family: Raleway;

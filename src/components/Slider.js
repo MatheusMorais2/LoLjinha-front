@@ -23,7 +23,7 @@ const Slider = () => {
         height={500}
         images={images}
         showBullets={true}
-        showNavs={true}
+        showNavs={false}
         autoPlay={true}
       />
     </div>
