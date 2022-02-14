@@ -41,6 +41,10 @@ const HomeButton = styled.button`
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 
+  &:hover {
+    background-color: #189ea7;
+  }
+
   &:disabled {
     display: flex;
     justify-content: center;

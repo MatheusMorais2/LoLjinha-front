@@ -29,14 +29,16 @@ export default function Header() {
 const Greetings = styled.div`
   font-family: Raleway;
   font-style: normal;
+  width: 200px;
   font-weight: 700;
   font-size: 20px;
   color: #ceba95;
 `;
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
+  padding-right: 50px;
   justify-content: space-around;
   align-items: center;
 `;

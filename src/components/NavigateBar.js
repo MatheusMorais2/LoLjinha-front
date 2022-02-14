@@ -39,6 +39,7 @@ const Navigate = styled.div`
   height: 40px;
   color: #232f54;
   .icon {
+    padding-left: 200px;
     transition: width 2s, height 2s, transform 1s;
     font-size: 30px;
   }
