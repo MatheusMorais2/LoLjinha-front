@@ -48,4 +48,37 @@ function getCart(token, setProductArray) {
   promise.catch((error) => console.log(error));
 }
 
-export { signUp, login, getItems, getProduct, putCart, getCart };
+function confirmPurchase(token, productArray, setConfirmCode) {
+  const config = { authorization: `Bearer ${token}` };
+
+  const promise = axios.post(
+    `${process.env.REACT_APP_API}/confirm-purchase`,
+    { items: productArray },
+    { headers: config }
+  );
+  promise.then((response) => {
+    setConfirmCode(response.data);
+  });
+  promise.catch(() => alert("Compra nao confirmada, tente novamente"));
+}
+
+function clearCart(token, setUser) {
+  const config = { authorization: `Bearer ${token}` };
+
+  const promise = axios.put(`${process.env.REACT_APP_API}/cart/clear`, {
+    headers: config,
+  });
+  promise.then((response) => setUser(response.data));
+  promise.catch((error) => console.log("Error clearing cart: ", error));
+}
+
+export {
+  signUp,
+  login,
+  getItems,
+  getProduct,
+  putCart,
+  getCart,
+  confirmPurchase,
+  clearCart,
+};

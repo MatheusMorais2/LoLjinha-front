@@ -5,6 +5,7 @@ import { StyledLink } from "../HomePage/style";
 import UserContext from "../../context/UserContext";
 import { useContext } from "react";
 import ToLogin from "../../components/ToLogin";
+import ToHome from "../../components/ToHome";
 
 export default function Cart() {
   const { user } = useContext(UserContext);
@@ -17,13 +18,7 @@ export default function Cart() {
         <CartText>Carrinho</CartText>
       </Banner>
       {user ? <Table /> : <ToLogin />}
-      <StyledLink to="/">
-        <CartButton>
-          Continuar
-          <br />
-          comprando
-        </CartButton>
-      </StyledLink>
+
       {user ? (
         <StyledLink to="/confirm-purchase">
           <CartButton>
@@ -35,6 +30,7 @@ export default function Cart() {
       ) : (
         ""
       )}
+      <ToHome />
     </Container>
   );
 }
