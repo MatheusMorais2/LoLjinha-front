@@ -26,4 +26,26 @@ function getProduct({ id }) {
   return promise;
 }
 
-export { signUp, login, getItems, getProduct };
+function putCart(id, token) {
+  const config = { Authorization: `Bearer ${token}` };
+  const promise = axios.put(
+    `${process.env.REACT_APP_API}/cart/${id}`,
+    {},
+    { headers: config }
+  );
+  return promise;
+}
+
+function getCart(token, setProductArray) {
+  const config = { authorization: `Bearer ${token}` };
+
+  const promise = axios.get(`${process.env.REACT_APP_API}/cart`, {
+    headers: config,
+  });
+  promise.then((response) => {
+    setProductArray(response.data);
+  });
+  promise.catch((error) => console.log(error));
+}
+
+export { signUp, login, getItems, getProduct, putCart, getCart };

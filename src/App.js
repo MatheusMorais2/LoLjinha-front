@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import ConfirmPurchase from "./pages/ConfirmPurchase";
 import Product from "./pages/Product";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/confirm-purchase" element={<ConfirmPurchase />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

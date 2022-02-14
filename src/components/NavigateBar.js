@@ -6,7 +6,10 @@ export default function NavigateBar() {
   return (
     <>
       <Navigate>
-        <span>Todos os produtos</span>
+        <span>
+          Todos os
+          <br /> produtos
+        </span>
         <span>Armaduras</span>
         <span>Armas</span>
         <span>Cura</span>
@@ -21,32 +24,32 @@ export default function NavigateBar() {
 }
 
 const Navigate = styled.div`
+  padding: 0 5vw;
   background-color: #ceba95;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 40px;
-  font-size: 30px;
+  /* font-size: 5vh; */
   color: #232f54;
+  /* margin-bottom: 20px; */
 
   .icon {
-    padding-left: 300px;
+    /* padding-left: 300px; */
     transition: width 2s, height 2s, transform 1s;
-  }
-  .icon:hover {
-    transform: scale(1.1);
+    font-size: 30px;
   }
   span {
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.9vh;
     line-height: 18px;
     color: #232f54;
 
-    margin-left: 200px;
-    margin-right: 50px;
+    /* margin-left: 200px;
+    margin-right: 50px; */
   }
   span:hover {
     color: #189ea7;
