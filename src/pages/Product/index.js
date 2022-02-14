@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { getProduct } from "../../services/loljinha";
 import { AddCartButton } from "../../components/Button";
 import { BsCartPlus } from "react-icons/bs";
-import BigLogo from "../../components/Logo";
 import NavigateBar from "../../components/NavigateBar";
 import { Container, StyledLink, ProductInfo, ProductImg } from "./style";
+import Header from "../../components/Header";
 
 export default function Product() {
   const { id } = useParams();
@@ -26,7 +26,7 @@ export default function Product() {
 
   return (
     <>
-      <BigLogo />
+      <Header />
       <NavigateBar />
       <Container>
         <div className="center">
@@ -35,7 +35,7 @@ export default function Product() {
           </ProductImg>
           <ProductInfo>
             <span>{item.name}</span>
-            <span className="price">{item.value}</span>
+            <span className="price">{item.value}</span> 
             <div className="img"></div>
             <StyledLink to="/cart">
               <AddCartButton>

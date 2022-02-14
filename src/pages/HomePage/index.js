@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
-import BigLogo from "../../components/Logo";
 import Slider from "../../components/Slider";
 import {
   Container,
   Content,
-  Header,
   StyledLink,
   ItemList,
   ItemBox,
   Item,
   Footer,
 } from "./style";
-import { HomeButton } from "../../components/Button";
 import { getItems } from "../../services/loljinha";
+import Header from "../../components/Header";
 import NavigateBar from "../../components/NavigateBar";
 
 function HomePage() {
@@ -31,15 +29,7 @@ function HomePage() {
 
   return (
     <>
-      <Header>
-        <BigLogo />
-        <StyledLink to="/login">
-          <HomeButton>Login</HomeButton>
-        </StyledLink>
-        <StyledLink to="/sign-up">
-          <HomeButton>SignUp</HomeButton>
-        </StyledLink>
-      </Header>
+      <Header />
       <NavigateBar />
       <Content>
         <Slider />

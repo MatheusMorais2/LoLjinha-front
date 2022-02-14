@@ -26,4 +26,33 @@ function getProduct({ id }) {
   return promise;
 }
 
-export { signUp, login, getItems, getProduct };
+function getAllProduct() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/all`);
+  return promise;
+}
+
+function getArmor() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/armor`);
+  return promise;
+}
+
+function getWeapon() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/weapon`);
+  return promise;
+}
+
+function getHeal() {
+  const promise = axios.get(`${process.env.REACT_APP_API}/heal`);
+  return promise;
+}
+
+export {
+  signUp,
+  login,
+  getItems,
+  getProduct,
+  getAllProduct,
+  getArmor,
+  getWeapon,
+  getHeal,
+};

@@ -6,6 +6,10 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Product from "./pages/Product";
+import AllProduct from "./pages/NavigatePages/AllProducts";
+import ArmorProduct from "./pages/NavigatePages/Armor";
+import WeaponProduct from "./pages/NavigatePages/Weapon";
+import HealProduct from "./pages/NavigatePages/Heal";
 
 export default function App() {
   const [user, setUser] = useState("");
@@ -17,6 +21,10 @@ export default function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/all" element={<AllProduct />} />
+          <Route path="/armor" element={<ArmorProduct />} />
+          <Route path="/weapon" element={<WeaponProduct />} />
+          <Route path="/heal" element={<HealProduct />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
