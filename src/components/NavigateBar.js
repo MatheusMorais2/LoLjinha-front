@@ -32,18 +32,20 @@ const Navigate = styled.div`
   padding: 0 5vw;
   background-color: #ceba95;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  padding-left: 300px;
+  width: 100%;
   height: 40px;
-  /* font-size: 5vh; */
   color: #232f54;
-  /* margin-bottom: 20px; */
 
   .icon {
-    /* padding-left: 300px; */
+    padding-left: 200px;
     transition: width 2s, height 2s, transform 1s;
     font-size: 30px;
+  }
+  .icon:hover {
+    transform: scale(1.2);
   }
   span {
     font-family: Raleway;
@@ -52,9 +54,6 @@ const Navigate = styled.div`
     font-size: 1.9vh;
     line-height: 18px;
     color: #232f54;
-
-    /* margin-left: 200px;
-    margin-right: 50px; */
   }
   span:hover {
     color: #189ea7;

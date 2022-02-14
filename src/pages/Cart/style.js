@@ -6,7 +6,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
 `;
 
 const Banner = styled.div`
@@ -20,7 +19,7 @@ const Image = styled.img`
   max-height: 400px;
   object-fit: cover;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 `;
 
 const CartText = styled.span`
