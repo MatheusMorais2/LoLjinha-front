@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
-import BigLogo from "../../components/Logo";
 import Slider from "../../components/Slider";
 import {
   Container,
   Content,
-  Header,
   StyledLink,
   ItemList,
   ItemBox,
   Item,
   Footer,
 } from "./style";
-import { HomeButton } from "../../components/Button";
 import { getItems } from "../../services/loljinha";
 import NavigateBar from "../../components/NavigateBar";
+import Header from "../../components/Header";
 
 function HomePage() {
   const [items, setItems] = useState([]);
@@ -31,15 +29,7 @@ function HomePage() {
 
   return (
     <>
-      <Header>
-        <BigLogo />
-        <StyledLink to="/login">
-          <HomeButton>Login</HomeButton>
-        </StyledLink>
-        <StyledLink to="/sign-up">
-          <HomeButton>SignUp</HomeButton>
-        </StyledLink>
-      </Header>
+      <Header />
       <NavigateBar />
       <Content>
         <Slider />

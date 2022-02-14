@@ -16,6 +16,7 @@ import { getCart, confirmPurchase, clearCart } from "../../services/loljinha";
 import ToHome from "../../components/ToHome";
 import { useNavigate } from "react-router-dom";
 import { StyledLink } from "../HomePage/style";
+import Header from "../../components/Header";
 
 export default function ConfirmPurchase() {
   const { user, setUser } = useContext(UserContext);
@@ -28,13 +29,14 @@ export default function ConfirmPurchase() {
     getCart(user.token, setProductArray);
   }, []);
 
-  async function handleConfirm() {
-    await confirmPurchase(user.token, productArray, setConfirmCode);
-    await clearCart(user.token, setUser);
+  function handleConfirm() {
+    confirmPurchase(user.token, productArray, setConfirmCode);
+    clearCart(user.token, setUser);
   }
 
   return (
     <Container>
+      <Header />
       <NavigateBar />
       <Overview>
         <span>Você está comprando:</span>

@@ -31,12 +31,8 @@ const Navigate = styled.div`
   align-items: center;
   width: 100vw;
   height: 40px;
-  /* font-size: 5vh; */
   color: #232f54;
-  /* margin-bottom: 20px; */
-
   .icon {
-    /* padding-left: 300px; */
     transition: width 2s, height 2s, transform 1s;
     font-size: 30px;
   }
@@ -47,14 +43,12 @@ const Navigate = styled.div`
     font-size: 1.9vh;
     line-height: 18px;
     color: #232f54;
-
-    /* margin-left: 200px;
-    margin-right: 50px; */
   }
   span:hover {
     color: #189ea7;
   }
 `;
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #232f54;

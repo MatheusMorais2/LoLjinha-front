@@ -2,20 +2,30 @@ import { Link } from "react-router-dom";
 import poro2 from "../../assets/poro2.png";
 import styled from "styled-components";
 
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const Container = styled.div`
+  width: 90vw;
   height: 85vh;
   display: flex;
   justify-content: center;
+
+  padding-top: 20px;
   background-color: #e8d8bb;
 
   .center {
-    height: 80vh;
+    height: 90%;
     width: 80%;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: white;
-    margin: 30px;
 
     border-radius: 5px;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
@@ -39,14 +49,13 @@ const StyledLink = styled(Link)`
 `;
 
 const ProductInfo = styled.div`
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  max-height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: #efe7da;
-  margin: 50px;
   border-radius: 8px;
   border: solid 2px #19324c;
   .img {
@@ -62,7 +71,7 @@ const ProductInfo = styled.div`
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 28px;
     color: #19324c;
   }
   .price {
@@ -74,19 +83,18 @@ const ProductImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 500px;
-  margin: 50px;
+  width: 80%;
+  max-height: 40%;
   background-color: #efe7da;
   border-radius: 20px;
   border: solid 2px #19324c;
 
   img {
     margin: 5px;
-    width: 460px;
-    height: 460px;
+    max-height: 95%;
+    min-width: 100px;
     border-radius: 20px;
   }
 `;
 
-export { Container, StyledLink, ProductInfo, ProductImg };
+export { Container, StyledLink, ProductInfo, ProductImg, Wrap };

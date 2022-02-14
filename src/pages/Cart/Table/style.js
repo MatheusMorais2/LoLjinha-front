@@ -15,6 +15,17 @@ const Container = styled.div`
   margin-bottom: 20px;
 `;
 
+const QuantityButton = styled.div`
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232f54;
+  font-size: 20px;
+  color: #ceba95;
+`;
+
 const Header = styled.div`
   width: 100%;
   font-weight: bold;
@@ -56,4 +67,4 @@ const Total = styled.div`
   margin-bottom: 20px;
 `;
 
-export { Container, Header, Product, Total };
+export { Container, Header, Product, Total, QuantityButton };
