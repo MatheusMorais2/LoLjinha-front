@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getProduct } from "../../services/loljinha";
+import React, { useEffect, useState, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getProduct, putCart } from "../../services/loljinha";
 import { AddCartButton } from "../../components/Button";
 import { BsCartPlus } from "react-icons/bs";
+import BigLogo from "../../components/Logo";
 import NavigateBar from "../../components/NavigateBar";
-import { Container, StyledLink, ProductInfo, ProductImg } from "./style";
-import Header from "../../components/Header";
-
+import { Container, ProductInfo, ProductImg } from "./style";
+import UserContext from "../../context/UserContext";
 
 export default function Product() {
   const { id } = useParams();
@@ -40,7 +40,7 @@ export default function Product() {
 
   return (
     <>
-      <Header />
+      <BigLogo />
       <NavigateBar />
       <Container>
         <div className="center">
@@ -49,7 +49,7 @@ export default function Product() {
           </ProductImg>
           <ProductInfo>
             <span>{item.name}</span>
-            <span className="price">{item.value}</span> 
+            <span className="price">{item.value}</span>
             <div className="img"></div>
 
             <AddCartButton onClick={user ? putIntoCart : loginAlert}>
