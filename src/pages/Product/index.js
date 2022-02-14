@@ -7,9 +7,13 @@ import NavigateBar from "../../components/NavigateBar";
 import { Container, StyledLink, ProductInfo, ProductImg } from "./style";
 import Header from "../../components/Header";
 
+
 export default function Product() {
   const { id } = useParams();
   const [item, setItem] = useState({});
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
+
   useEffect(() => {
     renderProduct();
   }, []);
@@ -22,6 +26,16 @@ export default function Product() {
     promise.catch((error) => {
       console.log(error);
     });
+  }
+
+  function putIntoCart() {
+    const promise = putCart(id, user.token);
+    promise.then(() => navigate("/cart", { replace: true }));
+    promise.catch((error) => console.log(error));
+  }
+
+  function loginAlert() {
+    alert("Por favor, faça login para continuar para o carrinho");
   }
 
   return (
@@ -37,13 +51,12 @@ export default function Product() {
             <span>{item.name}</span>
             <span className="price">{item.value}</span> 
             <div className="img"></div>
-            <StyledLink to="/cart">
-              <AddCartButton>
-                {" "}
-                <BsCartPlus className="icon" />
-                Comprar
-              </AddCartButton>
-            </StyledLink>
+
+            <AddCartButton onClick={user ? putIntoCart : loginAlert}>
+              {" "}
+              <BsCartPlus className="icon" />
+              Comprar
+            </AddCartButton>
           </ProductInfo>
         </div>
       </Container>
