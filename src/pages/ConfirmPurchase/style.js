@@ -24,7 +24,7 @@ const Overview = styled.div`
   margin-bottom: 20px;
   margin-top: 20px;
   .span {
-    margin-bottom: 10px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -42,30 +42,66 @@ const Total = styled.div`
 const Buttons = styled.div`
   margin-top: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   justify-content: space-around;
 `;
 
 const Button = styled.div`
-  width: 30%;
+  width: 120px;
   height: 40px;
+  margin-bottom: 20px;
+  font-family: Raleway;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ceba95;
+`;
 
+const Confirm = styled.div`
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
+  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  border-radius: 5px;
+`;
 
+const Cancel = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+`;
+
+const ConfirmCode = styled.div`
+  width: 80%;
+  height: 60px;
   font-family: Raleway;
   font-size: 18px;
   line-height: 18px;
   color: #ceba95;
-  .confirm {
-    background-color: green;
-  }
-  .cancel {
-    background-color: red;
-  }
+  background-color: #232f54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-export { Container, Overview, ProductTitle, Total, Buttons, Button };
+export {
+  Container,
+  Overview,
+  ProductTitle,
+  Total,
+  Buttons,
+  Button,
+  ConfirmCode,
+  Confirm,
+  Cancel,
+};
