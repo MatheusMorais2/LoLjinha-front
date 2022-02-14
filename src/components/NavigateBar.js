@@ -38,9 +38,7 @@ const Navigate = styled.div`
   width: 100%;
   height: 40px;
   color: #232f54;
-
   .icon {
-    padding-left: 200px;
     transition: width 2s, height 2s, transform 1s;
     font-size: 30px;
   }
@@ -59,6 +57,7 @@ const Navigate = styled.div`
     color: #189ea7;
   }
 `;
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #232f54;

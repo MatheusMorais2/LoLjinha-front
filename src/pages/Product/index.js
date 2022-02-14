@@ -3,10 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getProduct, putCart } from "../../services/loljinha";
 import { AddCartButton } from "../../components/Button";
 import { BsCartPlus } from "react-icons/bs";
-import BigLogo from "../../components/Logo";
 import NavigateBar from "../../components/NavigateBar";
-import { Container, ProductInfo, ProductImg } from "./style";
+import { Container, ProductInfo, ProductImg, Wrap } from "./style";
 import UserContext from "../../context/UserContext";
+import Header from "../../components/Header";
 
 export default function Product() {
   const { id } = useParams();
@@ -39,8 +39,8 @@ export default function Product() {
   }
 
   return (
-    <>
-      <BigLogo />
+    <Wrap>
+      <Header />
       <NavigateBar />
       <Container>
         <div className="center">
@@ -60,6 +60,6 @@ export default function Product() {
           </ProductInfo>
         </div>
       </Container>
-    </>
+    </Wrap>
   );
 }

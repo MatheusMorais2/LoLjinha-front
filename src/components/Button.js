@@ -49,7 +49,7 @@ const HomeButton = styled.button`
 `;
 const AddCartButton = styled.button`
   height: 50px;
-  width: 160px;
+  width: 90%;
   border: none;
   font-size: 18px;
   text-decoration: none;
@@ -60,6 +60,7 @@ const AddCartButton = styled.button`
   font-weight: bolder;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 10px;
 
   &:disabled {
     display: flex;

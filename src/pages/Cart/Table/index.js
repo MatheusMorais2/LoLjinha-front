@@ -1,15 +1,23 @@
-import { Header, Container, Product, Total } from "./style";
+import { Header, Container, Product, Total, QuantityButton } from "./style";
 import UserContext from "../../../context/UserContext";
 import { useContext, useEffect, useState } from "react";
-import { getCart } from "../../../services/loljinha";
+import { addOne, getCart, removeOne } from "../../../services/loljinha";
 
 export default function Table() {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const [productArray, setProductArray] = useState(null);
 
   useEffect(() => {
     getCart(user.token, setProductArray);
   }, []);
+
+  function handleAdd(id) {
+    addOne(id, user, setUser);
+  }
+
+  function handleRemove(id) {
+    removeOne(id, user, setUser);
+  }
 
   let total = 0;
 
@@ -17,6 +25,7 @@ export default function Table() {
     <Container>
       <Header>
         <span className="product">Produto</span>
+        <span>Quantidade</span>
         <span>Preço</span>
       </Header>
 
@@ -34,6 +43,15 @@ export default function Table() {
                   />
                   <span className="name">{item.name}</span>
                 </div>
+                <span>
+                  <QuantityButton onClick={() => handleAdd(item._id)}>
+                    +
+                  </QuantityButton>{" "}
+                  {elem.quantity}{" "}
+                  <QuantityButton onClick={() => handleRemove(item._id)}>
+                    -
+                  </QuantityButton>
+                </span>
                 <span>{item.value}</span>
               </Product>
             );

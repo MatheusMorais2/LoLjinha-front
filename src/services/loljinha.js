@@ -68,7 +68,7 @@ function getCart(token, setProductArray) {
   promise.catch((error) => console.log(error));
 }
 
-function confirmPurchase(token, productArray, setConfirmCode) {
+function confirmPurchase(token, productArray, setConfirmCode, setUser) {
   const config = { authorization: `Bearer ${token}` };
 
   const promise = axios.post(
@@ -85,11 +85,41 @@ function confirmPurchase(token, productArray, setConfirmCode) {
 function clearCart(token, setUser) {
   const config = { authorization: `Bearer ${token}` };
 
-  const promise = axios.put(`${process.env.REACT_APP_API}/cart/clear`, {
-    headers: config,
-  });
+  const promise = axios.delete(
+    `${process.env.REACT_APP_API}/cart/clear`,
+    {
+      headers: config,
+    },
+    { body: "" }
+  );
   promise.then((response) => setUser(response.data));
   promise.catch((error) => console.log("Error clearing cart: ", error));
+}
+
+function addOne(id, user, setUser) {
+  const token = user.token;
+
+  const config = { authorization: `Bearer ${token}` };
+  const promise = axios.post(
+    `${process.env.REACT_APP_API}/cart/add/${id}`,
+    {},
+    { headers: config }
+  );
+  promise.then((response) => console.log(response.data));
+  promise.catch((error) => console.log(error));
+}
+
+function removeOne(id, user, setUser) {
+  const token = user.token;
+
+  const config = { authorization: `Bearer ${token}` };
+  const promise = axios.post(
+    `${process.env.REACT_APP_API}/cart/remove/${id}`,
+    {},
+    { headers: config }
+  );
+  promise.then((response) => console.log(response.data));
+  promise.catch((error) => console.log(error));
 }
 
 export {
@@ -104,5 +134,7 @@ export {
   putCart,
   getCart,
   confirmPurchase,
-  clearCart
+  clearCart,
+  addOne,
+  removeOne,
 };

@@ -1,38 +1,42 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
 import BigLogo from "./Logo";
+import { StyledLink } from "../pages/HomePage/style";
 import { HomeButton } from "./Button";
+import UserContext from "../context/UserContext";
+import { useContext } from "react";
+import styled from "styled-components";
 
-export default function NavigateBar() {
+export default function Header() {
+  const { user } = useContext(UserContext);
   return (
-    <>
-      <Header>
-        <BigLogo />
-        <StyledLink to="/login">
-          <HomeButton>Login</HomeButton>
-        </StyledLink>
-        <StyledLink to="/sign-up">
-          <HomeButton>SignUp</HomeButton>
-        </StyledLink>
-      </Header>
-    </>
+    <Container>
+      <BigLogo />
+      {user ? (
+        <Greetings>Olá,{` ${user.name}`}</Greetings>
+      ) : (
+        <>
+          <StyledLink to="/login">
+            <HomeButton>Login</HomeButton>
+          </StyledLink>
+          <StyledLink to="/sign-up">
+            <HomeButton>SignUp</HomeButton>
+          </StyledLink>
+        </>
+      )}
+    </Container>
   );
 }
 
-const Header = styled.div`
-  display: flex;
-  margin-left: 30px;
-  margin-right: 30px;
-  align-items: center;
-`;
-
-const StyledLink = styled(Link)`
-  display: flex;
+const Greetings = styled.div`
   font-family: Raleway;
   font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: #ffffff;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ceba95;
+`;
+
+const Container = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
