@@ -10,13 +10,6 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.div`
-  display: flex;
-  margin-left: 30px;
-  margin-right: 30px;
-  align-items: center;
-`;
-
 const StyledLink = styled(Link)`
   display: flex;
   font-family: Raleway;
@@ -93,13 +86,4 @@ const Footer = styled.div`
   }
 `;
 
-export {
-  Container,
-  Header,
-  StyledLink,
-  Content,
-  ItemBox,
-  ItemList,
-  Footer,
-  Item,
-};
+export { Container, StyledLink, Content, ItemBox, ItemList, Footer, Item };

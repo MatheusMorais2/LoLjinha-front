@@ -6,13 +6,18 @@ export default function NavigateBar() {
   return (
     <>
       <Navigate>
-        <span>
-          Todos os
-          <br /> produtos
-        </span>
-        <span>Armaduras</span>
-        <span>Armas</span>
-        <span>Cura</span>
+        <StyledLink to={"/all"}>
+          <span>Todos os produtos</span>
+        </StyledLink>
+        <StyledLink to={"/armor"}>
+          <span>Armaduras</span>
+        </StyledLink>
+        <StyledLink to={"/weapon"}>
+          <span>Armas</span>
+        </StyledLink>
+        <StyledLink to={"/heal"}>
+          <span>Cura</span>
+        </StyledLink>
         <div className="icon">
           <StyledLink to="/cart">
             <BsCartPlus />
