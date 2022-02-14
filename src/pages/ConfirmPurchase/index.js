@@ -14,7 +14,6 @@ import UserContext from "../../context/UserContext";
 import { useContext, useEffect, useState } from "react";
 import { getCart, confirmPurchase, clearCart } from "../../services/loljinha";
 import ToHome from "../../components/ToHome";
-import { useNavigate } from "react-router-dom";
 import { StyledLink } from "../HomePage/style";
 import Header from "../../components/Header";
 

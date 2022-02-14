@@ -12,7 +12,6 @@ import {
 import { getItems } from "../../services/loljinha";
 import Header from "../../components/Header";
 import NavigateBar from "../../components/NavigateBar";
-import Header from "../../components/Header";
 
 function HomePage() {
   const [items, setItems] = useState([]);
